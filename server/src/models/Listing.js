@@ -17,7 +17,6 @@ class Listing {
         if (listings.find(listing => listing.id === id)) {
             throw new Error('Listing with this ID already exists');
         }
-
         this.id = id;
     }
 

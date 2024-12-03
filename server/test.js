@@ -25,7 +25,7 @@ const listing = listings.find(listing => listing.id === 'test3');
 
 console.log(listing.auction.bids)
 
-listing.auction.bids.push(new Bid('bidder', 700, 'userId'));
+listing.auction.bids.push(new Bid('bidder', 800, 'userId'));
 let currentPrice = Math.max(...listing.auction.bids.map(bid => bid.amount));
 
 console.log(currentPrice)

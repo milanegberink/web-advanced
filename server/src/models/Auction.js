@@ -1,6 +1,4 @@
 import Bid from "./Bid.js";
-import writeToFile from "../modules/writeToFile.js";
-import listings from '../data/listings.json' assert { type: 'json' };
 
 class Auction {
     constructor(startingPrice, bids, endDate) {
@@ -18,7 +16,6 @@ class Auction {
         if (!bids.every(bid => bid instanceof Bid)) {
             throw new Error('Bids must be an array of Bid instances');
         }
-
         this.bids = bids;
     }
 }

@@ -40,9 +40,14 @@
           "bidder": "bidder",
           "amount": 700,
           "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 800,
+          "userId": "userId"
         }
       ],
-      "currentPrice": 700
+      "currentPrice": 800
     }
   }
 ]
