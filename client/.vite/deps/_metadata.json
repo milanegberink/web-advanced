@@ -1,0 +1,25 @@
+{
+  "hash": "e2b2a0f0",
+  "configHash": "d6ad3ec9",
+  "lockfileHash": "8f67e017",
+  "browserHash": "026b8973",
+  "optimized": {
+    "@mateothegreat/svelte5-router": {
+      "src": "../../node_modules/@mateothegreat/svelte5-router/index.js",
+      "file": "@mateothegreat_svelte5-router.js",
+      "fileHash": "a75a024b",
+      "needsInterop": false
+    },
+    "svelte": {
+      "src": "../../node_modules/svelte/src/index-client.js",
+      "file": "svelte.js",
+      "fileHash": "a202c2b9",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-RGIOIEUU": {
+      "file": "chunk-RGIOIEUU.js"
+    }
+  }
+}

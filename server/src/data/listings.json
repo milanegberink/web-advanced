@@ -1,0 +1,33 @@
+[
+  {
+    "id": "test",
+    "name": "xyz",
+    "genre": "y",
+    "description": "z",
+    "slug": "a",
+    "image": "b",
+    "producer": "c",
+    "auction": {
+      "startingPrice": 1,
+      "endDate": "12",
+      "bids": [
+        {
+          "bidder": "bidder",
+          "amount": 1,
+          "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 200,
+          "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 500,
+          "userId": "userId"
+        }
+      ],
+      "currentPrice": 200
+    }
+  }
+]
