@@ -4,7 +4,7 @@ import Bid from "./src/models/Bid.js";
 import listings from './src/data/listings.json' assert { type: 'json' };
 import writeToFile from "./src/modules/writeToFile.js";
 
-// const listing3 = new Listing(
+// const listing = new Listing(
 //     'test3',
 //     'xyz',
 //     'y',
@@ -13,19 +13,25 @@ import writeToFile from "./src/modules/writeToFile.js";
 //     'b',
 //     'c',
 //     new Auction(1,
-//         2,
 //         [
 //             new Bid('bidder', 1, 'userId'),
 //             new Bid('bidder', 200, 'userId')
 //         ],
 //         "12"
 //     ));
+// listing.save();
 
-const listing = listings.find(listing => listing.id === 'test');
+const listing = listings.find(listing => listing.id === 'test3');
 
 console.log(listing.auction.bids)
 
-listing.auction.bids.push(new Bid('bidder', 500, 'userId'));
+listing.auction.bids.push(new Bid('bidder', 700, 'userId'));
+let currentPrice = Math.max(...listing.auction.bids.map(bid => bid.amount));
+
+console.log(currentPrice)
+
+listing.auction.currentPrice = currentPrice;
+console.log(listing.auction)
 
 console.log(listing.auction.bids)
 

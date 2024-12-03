@@ -1,6 +1,6 @@
 [
   {
-    "id": "test",
+    "id": "test3",
     "name": "xyz",
     "genre": "y",
     "description": "z",
@@ -25,9 +25,24 @@
           "bidder": "bidder",
           "amount": 500,
           "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 500,
+          "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 500,
+          "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 700,
+          "userId": "userId"
         }
       ],
-      "currentPrice": 200
+      "currentPrice": 700
     }
   }
 ]
