@@ -3,21 +3,13 @@ import writeToFile from "../modules/writeToFile.js";
 import listings from '../data/listings.json' assert { type: 'json' };
 
 class Listing {
-    constructor(id, name, genre, description, slug, image, producer, auction) {
-        this.setId(id);
+    constructor(name, description, image, manufacturer, auction) {
+        this.id = listings.length + 1;
         this.setName(name);
-        this.genre = genre;
         this.description = description;
-        this.slug = slug;
         this.image = image;
-        this.producer = producer;
+        this.manufacturer = manufacturer;
         this.setAuction(auction);
-    }
-    setId(id) {
-        if (listings.find(listing => listing.id === id)) {
-            throw new Error('Listing with this ID already exists');
-        }
-        this.id = id;
     }
 
     setName(name) {

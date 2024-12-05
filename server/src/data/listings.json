@@ -1,15 +1,13 @@
 [
   {
-    "id": "test3",
-    "name": "xyz",
-    "genre": "y",
-    "description": "z",
-    "slug": "a",
-    "image": "b",
-    "producer": "c",
+    "id": 1,
+    "name": "Hallo",
+    "description": "xyz",
+    "image": "y",
+    "manufacturer": "z",
     "auction": {
       "startingPrice": 1,
-      "endDate": "12",
+      "endDate": "2025-10-17T14:52:03.888Z",
       "bids": [
         {
           "bidder": "bidder",
@@ -25,29 +23,54 @@
           "bidder": "bidder",
           "amount": 500,
           "userId": "userId"
-        },
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Hallo",
+    "description": "xyz",
+    "image": "y",
+    "manufacturer": "z",
+    "auction": {
+      "startingPrice": 1,
+      "endDate": "2024-10-17T14:52:03.888Z",
+      "bids": [
         {
           "bidder": "bidder",
-          "amount": 500,
+          "amount": 1,
           "userId": "userId"
         },
         {
           "bidder": "bidder",
-          "amount": 500,
-          "userId": "userId"
-        },
-        {
-          "bidder": "bidder",
-          "amount": 700,
-          "userId": "userId"
-        },
-        {
-          "bidder": "bidder",
-          "amount": 800,
+          "amount": 200,
           "userId": "userId"
         }
-      ],
-      "currentPrice": 800
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "New listing",
+    "description": "xyz",
+    "image": "y",
+    "manufacturer": "z",
+    "auction": {
+      "startingPrice": 1,
+      "endDate": "12",
+      "bids": [
+        {
+          "bidder": "bidder",
+          "amount": 1,
+          "userId": "userId"
+        },
+        {
+          "bidder": "bidder",
+          "amount": 200,
+          "userId": "userId"
+        }
+      ]
     }
   }
 ]

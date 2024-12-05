@@ -3,19 +3,52 @@
 @tailwind utilities;
 
 :root {
+  /* Font Settings */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
+  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #0066ff;
+}
+
+[data-theme="light"] {
+  --color-bg-0: #EFEFEF;
+  --color-bg-1: white;
+  --color-bg-2: rgba(0, 0, 0, 0.05);
+  --color-text: #0B1215;
+}
+
+[data-theme="dark"] {
+  --color-bg-0: black;
+  --color-bg-1: #111;
+  --color-bg-2: rgba(255, 255, 255, 0.1);
+  --color-text: white;
 }
 
 * {
   margin: 0;
 }
 
-#app {
-  height: 100vh;
-  width: 100vw;
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, h1, h2, h3, p, .material-symbols-outlined {
+  color: var(--color-text);
+  transition: color 300ms;
+}
+
