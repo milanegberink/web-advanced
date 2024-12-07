@@ -43,13 +43,11 @@
         border-radius: 30px 0 0 30px;
         transition: border-radius 0.3s ease-in-out, background-color 0.5s;
         background-color: var(--color-bg-1);
+        overflow: auto;
     }
 
     .slot-container {
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        max-width: 900px;
+        max-width: 1280px;
         margin: auto;
     }
 

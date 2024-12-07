@@ -12,4 +12,6 @@ const validatePassword = (password) => {
 
 const hashPassword = (password) => bcrypt.hash(password, 10);
 
-export { validatePassword, hashPassword };
+const verifyPassword = (password, hashedPassword) => bcrypt.compare(password, hashedPassword);
+
+export { validatePassword, hashPassword, verifyPassword };

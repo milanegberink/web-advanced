@@ -8,14 +8,31 @@ import Auction from "./models/Auction.js";
 import Bid from "./models/Bid.js";
 import User from "./models/User.js";
 import bcrypt from "bcrypt";
+import newBid from "./modules/newBid.js";
 
 app.use(cors({ origin: 'http://localhost:5173' }));
 app.use(express.json());
 
 
 app.get('/listings/:id', (req, res) => {
-    const l = listings.find(listing => listing.id === Number(req.params.id));
-    res.send(l);
+    const listing = listings.find(listing => listing.id === Number(req.params.id));
+    if (!listing) {
+        res.sendStatus(404);
+    }
+    res.send(listing);
+});
+
+
+app.post('/listings/:id/bids', async(req, res) => {
+    const id = req.params.id;
+    console.log(id)
+    const { bidderName, bidAmount, userId } = req.body;
+    try {
+        await newBid(id, bidderName, bidAmount, userId);
+        res.sendStatus(200);
+    } catch (e) {
+        res.status(400).send(e.message);
+    }
 });
 
 app.get('/listings', (req, res) => {
@@ -48,4 +65,8 @@ app.post('/register', async(req, res) => {
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
+});
+
+app.post('/login', async(req, res) => {
+
 });

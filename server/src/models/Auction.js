@@ -3,8 +3,9 @@ import Bid from "./Bid.js";
 class Auction {
     constructor(startingPrice, bids, endDate) {
         this.setStartingPrice(startingPrice);
-        this.endDate = endDate;
+        this.setEndDate(endDate);
         this.setBids(bids);
+        this.currentPrice = startingPrice;
     }
     setStartingPrice(startingPrice) {
         if (typeof startingPrice !== 'number' || startingPrice < 0) {
@@ -16,7 +17,23 @@ class Auction {
         if (!bids.every(bid => bid instanceof Bid)) {
             throw new Error('Bids must be an array of Bid instances');
         }
+
         this.bids = bids;
+    }
+
+    setEndDate(endDate) {
+        if (!(endDate instanceof Date)) {
+            throw new Error('End date must be a Date object');
+        }
+
+        const proposedDate = new Date(endDate);
+        const now = new Date();
+
+        if (proposedDate < now) {
+            throw new Error('End date must be in the future');
+        }
+
+        this.endDate = endDate;
     }
 }
 

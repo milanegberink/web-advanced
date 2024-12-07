@@ -1,8 +1,9 @@
 ### POST request to example server
-POST http://localhost:3000/register
+POST http://localhost:3000/listings/1/bids
 Content-Type: application/json
 
 {
-  "username": "halloikben",
-  "password": "hallo ikn"
+  "bidderName": "Youssef",
+  "bidAmount": "26000",
+  "userId": "1"
 }

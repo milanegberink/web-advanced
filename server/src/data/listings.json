@@ -1,76 +1,122 @@
 [
   {
     "id": 1,
-    "name": "Hallo",
-    "description": "xyz",
-    "image": "y",
-    "manufacturer": "z",
+    "name": "New listing 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.",
+    "category": "Electronics",
+    "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
+    "manufacturer": "",
     "auction": {
       "startingPrice": 1,
-      "endDate": "2025-10-17T14:52:03.888Z",
+      "endDate": "2024-12-25T00:00:00.000Z",
       "bids": [
         {
-          "bidder": "bidder",
-          "amount": 1,
+          "bidder": "Milan Egberink",
+          "amount": 1004,
           "userId": "userId"
         },
         {
-          "bidder": "bidder",
-          "amount": 200,
+          "bidder": "Test1330",
+          "amount": 2000,
           "userId": "userId"
         },
         {
-          "bidder": "bidder",
-          "amount": 500,
+          "bidder": "Test1330",
+          "amount": 5000,
           "userId": "userId"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "6000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "9000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "10000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "20000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "21000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "26000",
+          "userId": "1"
         }
-      ]
+      ],
+      "currentPrice": "26000"
     }
   },
   {
     "id": 2,
-    "name": "Hallo",
-    "description": "xyz",
-    "image": "y",
-    "manufacturer": "z",
-    "auction": {
-      "startingPrice": 1,
-      "endDate": "2024-10-17T14:52:03.888Z",
-      "bids": [
-        {
-          "bidder": "bidder",
-          "amount": 1,
-          "userId": "userId"
-        },
-        {
-          "bidder": "bidder",
-          "amount": 200,
-          "userId": "userId"
-        }
-      ]
-    }
-  },
-  {
-    "id": 3,
     "name": "New listing",
-    "description": "xyz",
-    "image": "y",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.",
+    "category": "Electronics",
+    "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
     "manufacturer": "z",
     "auction": {
       "startingPrice": 1,
-      "endDate": "12",
+      "endDate": "2023-12-07T21:30:00.000Z",
       "bids": [
         {
-          "bidder": "bidder",
-          "amount": 1,
+          "bidder": "Milan Egberink",
+          "amount": 1004,
           "userId": "userId"
         },
         {
-          "bidder": "bidder",
-          "amount": 200,
+          "bidder": "Test1330",
+          "amount": 2000,
           "userId": "userId"
+        },
+        {
+          "bidder": "Test1330",
+          "amount": 5000,
+          "userId": "userId"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "6000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "8000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "21000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "22000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "23000",
+          "userId": "1"
+        },
+        {
+          "bidder": "Youssef",
+          "amount": "25000",
+          "userId": "1"
         }
-      ]
+      ],
+      "currentPrice": "25000"
     }
   }
 ]

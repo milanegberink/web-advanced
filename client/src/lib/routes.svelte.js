@@ -2,16 +2,12 @@ const routes =
     [
         {
             path: `/listings/(?<listingId>.*)`,
-            component: async () => import("../pages/Deprecated.svelte")
+            component: async () => import("../pages/ListingPage.svelte")
 
         },
         {
             path: `/listings`,
             component: async () => import("../pages/ListingsPage.svelte")
-        },
-        {
-            path: `/dev`,
-            component: async () => import("../pages/ListingPage.svelte")
         }
     ]
 

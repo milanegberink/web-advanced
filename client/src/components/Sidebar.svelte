@@ -6,6 +6,7 @@
 
 <nav id="sidebar" class={$isSidebarOpen ? 'open' : ''}>
     <div class="sidebar-content">
+        <img class="aspect-square w-[100px]" src="../src/assets/logo.svg">
         <ul>
             {#each navLinks as link, index}
                 <NavLink href={link.href} text={link.text} icon={link.icon}/>

@@ -34,13 +34,14 @@
     onMount(() => {
         fetchData();
         updateTime();
+
     });
+
 
     setInterval(updateTime, 1000);
 
 
 </script>
-
 
 {#if !expired}
     <div class="container font-bold">

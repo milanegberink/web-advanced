@@ -8,6 +8,16 @@ const navLinks = [
         text: "Biedingen",
         href: "/bids",
         icon: "event_upcoming"
+    },
+    {
+        text: "Archief",
+        href: "/archive",
+        icon: "archive"
+    },
+    {
+        text: "Uitloggen",
+        href: "/logout",
+        icon: "logout"
     }
 ];
 

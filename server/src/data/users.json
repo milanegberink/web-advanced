@@ -1,18 +1,12 @@
 [
   {
     "id": 1,
-    "username": "milanegaberink",
-    "password": {},
-    "role": "user"
-  },
-  {
-    "id": 2,
     "username": "milanegberink",
     "password": "$2b$10$ku9e1WC/KYDGoc.lN..muuay6hyk0.Jpsw4nZ1upnAXk.Hx0tGSi.",
     "role": "user"
   },
   {
-    "id": 3,
+    "id": 2,
     "username": "xasdasdasdasdasdasdsadasdsadsadasdsadasdsadsa",
     "password": "$2b$10$alW4EiGZ1KeOpD2L2BFd4e8zbmhV/sDzCm4D3O3ONQT0LbOgM0anO",
     "role": "user"

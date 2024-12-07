@@ -11,7 +11,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-primary: #0066ff;
+  --color-primary: #4aa134;
 }
 
 [data-theme="light"] {
@@ -39,6 +39,10 @@
   'opsz' 24
 }
 
+body {
+  background-color: var(--color-bg-0);
+}
+
 ul {
   list-style: none;
 }
@@ -47,7 +51,7 @@ a {
   text-decoration: none;
 }
 
-a, h1, h2, h3, p, .material-symbols-outlined {
+a, h1, h2, h3, p, span, .material-symbols-outlined {
   color: var(--color-text);
   transition: color 300ms;
 }

@@ -1,9 +1,8 @@
 <script>
     export let icon;
-    export let fill;
+    export let fill = false;
 </script>
 
-<!-- Hier vind je alle icons https://fonts.google.com/icons -->
 <span class="material-symbols-outlined {fill ? 'fill' : ''}" id="icon">
     {icon}
 </span>
