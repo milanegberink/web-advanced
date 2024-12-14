@@ -1,6 +1,6 @@
 const navLinks = [
     {
-        text: "Veilingen",
+        text: "Open Veilingen",
         href: "/listings",
         icon: "gavel"
     },

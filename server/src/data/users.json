@@ -1,14 +1,9 @@
 [
   {
     "id": 1,
-    "username": "milanegberink",
-    "password": "$2b$10$ku9e1WC/KYDGoc.lN..muuay6hyk0.Jpsw4nZ1upnAXk.Hx0tGSi.",
-    "role": "user"
-  },
-  {
-    "id": 2,
-    "username": "xasdasdasdasdasdasdsadasdsadsadasdsadasdsadsa",
-    "password": "$2b$10$alW4EiGZ1KeOpD2L2BFd4e8zbmhV/sDzCm4D3O3ONQT0LbOgM0anO",
-    "role": "user"
+    "username": "michaeljackson",
+    "password": "$2b$10$pteCJlsZNt2UwXBr9PYg5uI82px2vauP38.8XoIxtXWM6ruecw9PG",
+    "role": "user",
+    "secret": "3aa64d7a-e879-4c33-afcf-d087787adae4"
   }
 ]

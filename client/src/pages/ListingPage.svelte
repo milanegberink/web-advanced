@@ -2,9 +2,14 @@
     import {onMount} from "svelte";
     import NumberFlow from '@number-flow/svelte'
     import Bid from "../components/Bid.svelte";
+    import {fly} from 'svelte/transition';
 
     const {params} = $props();
     const listingId = params.listingId;
+
+    let bid = $state();
+    let isBidding = $state(false);
+
 
     let endDate = $state();
     let expired = $state();
@@ -53,14 +58,35 @@
         const totalDays = Math.floor(totalHours / 24);
 
         timeLeft.days = totalDays;
-        timeLeft.hours = totalHours % 24 - 1;
+        timeLeft.hours = totalHours % 24;
         timeLeft.minutes = totalMinutes % 60;
         timeLeft.seconds = totalSeconds % 60;
     };
 
-    const submitBid = () => {
+    const submitBid = async (event) => {
         event.preventDefault();
-        fetchListing();
+        const token = localStorage.getItem('token');
+        try {
+            const response = await fetch('http://localhost:3000/bids', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    bidAmount: bid,
+                    listingId: listingId
+                })
+            });
+
+            await fetchListing();
+
+            if (response.ok) {
+                isBidding = false;
+            }
+        } catch (e) {
+            console.error(e);
+        }
     };
 
     onMount(() => {
@@ -81,20 +107,7 @@
 </li>
 {/snippet}
 
-<div popover id="newBid" class="w-[500px] h-[500px] outline outline-1 m-auto rounded-xl">
-    <form onsubmit={submitBid}>
-        <div class="mb-4">
-            <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
-            <input type="number" id="amount"
-                   required>
-        </div>
-        <button type="submit">
-            Submit Bid
-        </button>
-    </form>
-</div>
-
-<div class="w-full h-full flex justify-center items-center">
+<div class="w-full h-full flex flex-col justify-center items-center md:flex-col lg:flex-row" >
     <div class="w-full h-[50rem] p-3">
         <div class="container bg-white mb-3 w-full aspect-square outline outline-1 outline-[--color-bg-2] rounded-xl">
             <img src={image} alt="" class="object-cover">
@@ -107,13 +120,15 @@
     </div>
     <div class="w-full h-[50rem] p-3">
         {#each bids as bid, index}
-            {#if index === 0}
-                <h2 class="font-bold text-2xl my-5">Hoogste bod</h2>
-                <Bid bidder={bid.bidder} amount={bid.amount} highest={true}/>
-                <hr class="mb-5">
-            {:else}
-                <Bid bidder={bid.bidder} amount={bid.amount}/>
-            {/if}
+            <div transition:fly={{ x: -20, duration: 200, delay: index * 50 }}>
+                {#if index === 0}
+                    <h2 class="font-bold text-2xl my-5">Hoogste bod</h2>
+                    <Bid bidder={bid.bidder} amount={bid.amount} highest={true}/>
+                    <hr class="mb-5">
+                {:else if index < 10}
+                    <Bid bidder={bid.bidder} amount={bid.amount}/>
+                {/if}
+            </div>
         {/each}
         {#if !expired}
             <ul class="flex mb-5 mt-10">
@@ -122,10 +137,26 @@
                 {@render time(timeLeft.minutes, "Minuten")}
                 {@render time(timeLeft.seconds, "Seconden")}
             </ul>
-            <button onclick={fetchListing} popovertarget="newBid"
-                    class="flex font-medium text-green-700 text-xl bg-gradient-to-b from-green-400 to-green-200 px-10 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
-                Plaats bod
-            </button>
+            {#if !isBidding}
+                <button id="place-bid" onclick={() => isBidding = true} popovertarget="new-bid-popover"
+                        class="flex font-medium text-blue-700 text-xl bg-gradient-to-b from-blue-400 to-blue-200 px-10 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
+                    Plaats bod
+                </button>
+            {:else}
+                <form onsubmit={submitBid}>
+                    <button id="place-bid"
+                            type="submit"
+                            class="mb-2 flex font-medium text-green-700 text-xl bg-gradient-to-b from-green-400 to-green-200 px-10 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
+                        Bevestig bod
+                    </button>
+                    <input type="number"
+                           required
+                           min={currentPrice + 1}
+                           placeholder="Bod"
+                           class="p-1 outline outline-1 rounded-xl"
+                           bind:value={bid}>
+                </form>
+            {/if}
         {:else}
             <h2 class="font-bold text-4xl text-red-400 mb-5">Veiling is voorbij</h2>
         {/if}

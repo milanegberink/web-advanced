@@ -6,7 +6,10 @@ import users from "./src/data/users.json" assert { type: 'json' };
 import bcrypt from "bcrypt";
 import User from "./src/models/User.js";
 import {verifyPassword} from "./src/modules/passwordUtils.js";
-
+import { v4 as uuidv4 } from 'uuid';
+import loginUser from "./src/modules/loginUser.js";
+import jwt from "jsonwebtoken";
+import validateToken from "./src/modules/validateToken.js";
 // const listing = new Listing(
 //     'New listing',
 //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.',
@@ -24,7 +27,6 @@ import {verifyPassword} from "./src/modules/passwordUtils.js";
 
 // await newBid(1, 'Test1330', 5000, 'userId');
 
-const user = await User.create('Milan', 'password', 'user');
+const jwtToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvcnRuaXRlIiwicm9sZSI6InVzZXIiLCJpZCI6NSwiaWF0IjoxNzMzOTIyNTc5fQ.HF1-Rsecu_f8eAj6RLdHZB8cl83vc_gWxyJwWi6RKi0'
 
-
-console.log(await verifyPassword('password', user.password));
+validateToken(jwtToken)

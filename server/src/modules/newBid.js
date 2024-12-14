@@ -17,11 +17,10 @@ const newBid = async (listingId, bidderName, bidAmount, userId) => {
         throw Error('Auction has ended');
     }
 
-
     listing.auction.bids.push(new Bid(bidderName, bidAmount, userId));
+
     listing.auction.currentPrice = bidAmount;
 
-    console.log(listing)
 
     await writeToFile(listings, './src/data/listings.json');
 };

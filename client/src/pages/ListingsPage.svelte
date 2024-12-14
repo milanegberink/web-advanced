@@ -1,10 +1,30 @@
 <script>
-    import { route } from '@mateothegreat/svelte5-router';
+    import {onMount} from "svelte";
+    import Listing from "../components/Listing.svelte";
+
+    let listings = $state();
+
+    const fetchListings = async () => {
+        try {
+            const response = await fetch('http://localhost:3000/listings');
+            listings = await response.json();
+        } catch (error) {
+            console.error('Failed to fetch listings');
+        }
+    }
+
+    onMount(() => {
+        fetchListings();
+    });
 </script>
 
-<h2 class="text-4xl">Open Veilingen</h2>
+<h2 class="text-4xl font-bold">Open Veilingen</h2>
 
 
-<a use:route href="/listings/1">Listing 1</a>
-<a use:route href="/listings/2">Listing 2</a>
-<a use:route href="/listings/3">Listing 3</a>
+{#if listings}
+    <div class="flex flex-col">
+        {#each listings as listing}
+            <Listing id={listing.id}/>
+        {/each}
+    </div>
+{/if}

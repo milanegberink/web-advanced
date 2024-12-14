@@ -1,7 +1,7 @@
 <script>
-    import Icon from "./Icon.svelte";
+    import Icon from "../Icon.svelte";
     import {route} from "@mateothegreat/svelte5-router";
-    import {currentRoute} from "../stores/uiStore.svelte.js";
+    import {currentRoute} from "../../stores/uiStore.svelte.js";
 
     let {href, text, icon} = $props();
 
@@ -12,7 +12,7 @@
 </script>
 
 <li>
-    <a use:route onclick={$currentRoute = window.location.pathname} href={href} class={isActive() ? 'active' : ''}>
+    <a use:route onclick={() => $currentRoute = window.location.pathname} href={href} class={isActive() ? 'active' : ''}>
         <Icon icon={icon} fill={isActive()}/>
         <span>
             {text}

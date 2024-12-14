@@ -1,7 +1,7 @@
 <script>
-    import {isSidebarOpen} from '../stores/uiStore.svelte.js';
+    import {isSidebarOpen} from '../../stores/uiStore.svelte.js';
     import NavLink from "./NavLink.svelte";
-    import navLinks from "../lib/navLinks.svelte.js";
+    import navLinks from "../../lib/navLinks.svelte.js";
 </script>
 
 <nav id="sidebar" class={$isSidebarOpen ? 'open' : ''}>
@@ -26,6 +26,7 @@
         transition: width 350ms ease-out;
         overflow: hidden;
         width: 0;
+        text-wrap: nowrap;
     }
 
     #sidebar.open {

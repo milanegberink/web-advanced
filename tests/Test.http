@@ -1,9 +1,37 @@
 ### POST request to example server
-POST http://localhost:3000/listings/1/bids
+POST http://localhost:3000/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MDQ5MzEwfQ.XZ5dqBCrfD4XPsIJoJs8GZOTzMaJl7vrOqaGfufqeGI
+Content-Type: application/json
+
+### POST request to example server
+POST http://localhost:3000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MDQ5MzEwfQ.XZ5dqBCrfD4XPsIJoJs8GZOTzMaJl7vrOqaGfufqeGI
+Content-Type: application/json
+
+
+### POST request to example server
+POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "bidderName": "Youssef",
-  "bidAmount": "26000",
-  "userId": "1"
+  "username": "michaeljackson",
+  "password": "password"
+}
+### POST request to example server
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "username": "michaeljackson",
+  "password": "password"
+}
+
+### POST request to example server
+POST http://localhost:3000/bids
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbGFuIiwicm9sZSI6InVzZXIiLCJpZCI6MywiaWF0IjoxNzM0MDQxMzM0fQ.GQTs3o_UAoBQQjhGWLkR2CL5bKp8j7-6y1u8MOEHhVM
+Content-Type: application/json
+
+{
+  "listingId": 1,
+  "bidAmount": 10000
 }

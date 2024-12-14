@@ -16,47 +16,87 @@
           "userId": "userId"
         },
         {
-          "bidder": "Test1330",
-          "amount": 2000,
-          "userId": "userId"
+          "bidder": "lebronjames",
+          "amount": 1005,
+          "userId": 6
         },
         {
-          "bidder": "Test1330",
-          "amount": 5000,
-          "userId": "userId"
+          "bidder": "lebronjames",
+          "amount": 1006,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "6000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1007,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "9000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1008,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "10000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1009,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "20000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1010,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "21000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1011,
+          "userId": 6
         },
         {
-          "bidder": "Youssef",
-          "amount": "26000",
-          "userId": "1"
+          "bidder": "lebronjames",
+          "amount": 1012,
+          "userId": 6
+        },
+        {
+          "bidder": "lebronjames",
+          "amount": 1013,
+          "userId": 6
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1014,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1015,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1017,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1018,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1019,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1020,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 1021,
+          "userId": 1
         }
       ],
-      "currentPrice": "26000"
+      "currentPrice": 1021
     }
   },
   {

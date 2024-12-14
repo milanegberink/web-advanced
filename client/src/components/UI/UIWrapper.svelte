@@ -1,9 +1,9 @@
 <script>
-    import Sidebar from "../components/Sidebar.svelte";
-    import Profile from "../components/Profile.svelte";
-    import SidebarToggle from "../components/buttons/SidebarToggle.svelte";
-    import {isSidebarOpen} from '../stores/uiStore.svelte.js';
-    import ThemeSwitcher from "./buttons/ThemeSwitcher.svelte";
+    import Sidebar from "./Sidebar.svelte";
+    import Profile from "../Profile.svelte";
+    import SidebarToggle from "../buttons/SidebarToggle.svelte";
+    import {isSidebarOpen} from '../../stores/uiStore.svelte.js';
+    import ThemeSwitcher from "../buttons/ThemeSwitcher.svelte";
 </script>
 
 <div class="content-wrapper">

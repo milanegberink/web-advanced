@@ -11,7 +11,8 @@
         {#if highest}
             <Icon icon="trophy" fill={true}/>
         {/if}
-    <span class="text-xl">{bidder}</span>
+    <span class="text-xl text-blue-500">@{bidder}</span>
     </div>
     <span class="text-xl font-medium">€ {amount}</span>
 </div>
+
