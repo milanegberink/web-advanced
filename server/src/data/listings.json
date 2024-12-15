@@ -14,9 +14,19 @@
           "bidder": "admin",
           "amount": 6,
           "userId": 6
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 7,
+          "userId": 1
+        },
+        {
+          "bidder": "admin",
+          "amount": 8,
+          "userId": 6
         }
       ],
-      "currentPrice": 6
+      "currentPrice": 8
     }
   },
   {

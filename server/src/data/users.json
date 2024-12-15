@@ -3,8 +3,7 @@
     "id": 1,
     "username": "michaeljackson",
     "password": "$2b$10$pteCJlsZNt2UwXBr9PYg5uI82px2vauP38.8XoIxtXWM6ruecw9PG",
-    "role": "user",
-    "secret": "20b2c234-5e31-45fa-8004-01874fb90f10"
+    "role": "user"
   },
   {
     "id": 2,
@@ -35,6 +34,6 @@
     "username": "admin",
     "password": "$2b$10$WQNtknh2MqrJQTPPiOjTFeIh17Hitc5f9Pfwxs9k4q6ElqjRr6iV6",
     "role": "user",
-    "secret": "5a827ff5-61d7-40d3-b5fa-4e9e8ebfdf22"
+    "secret": "8a00a11d-872a-450a-8701-11a6c9240408"
   }
 ]

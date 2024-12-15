@@ -138,7 +138,7 @@
             </div>
         {/each}
         {#if !expired}
-            <ul class="flex mb-5 mt-10">
+            <ul class="mb-5 mt-10 grid grid-cols-2">
                 {@render time(timeLeft.days, "Dagen")}
                 {@render time(timeLeft.hours, "Uur")}
                 {@render time(timeLeft.minutes, "Minuten")}
