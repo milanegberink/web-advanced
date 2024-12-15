@@ -7,6 +7,7 @@ const logoutUser = async () => {
             method: 'POST',
             headers: {'Authorization': `Bearer ${token}`}
         });
+        localStorage.removeItem('token');
         goto('/login');
     } catch (error) {
         console.error(error);

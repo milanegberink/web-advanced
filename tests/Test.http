@@ -1,6 +1,6 @@
 ### POST request to example server
-POST http://localhost:3000/auth
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MDQ5MzEwfQ.XZ5dqBCrfD4XPsIJoJs8GZOTzMaJl7vrOqaGfufqeGI
+GET http://localhost:3000/bids
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MTk3MDk5fQ.a0U7ceegDAASS2e0KT_jy0-YyLjWiY7xF1rAVGfsAD4
 Content-Type: application/json
 
 ### POST request to example server
@@ -22,16 +22,16 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-  "username": "michaeljackson",
+  "username": "milan",
   "password": "password"
 }
 
 ### POST request to example server
 POST http://localhost:3000/bids
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbGFuIiwicm9sZSI6InVzZXIiLCJpZCI6MywiaWF0IjoxNzM0MDQxMzM0fQ.GQTs3o_UAoBQQjhGWLkR2CL5bKp8j7-6y1u8MOEHhVM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MjA0MTEzfQ.RaxSwfz__XZ5fASpZ5Y4gAFH51SE3gIlT8jUPk3pChU
 Content-Type: application/json
 
 {
   "listingId": 1,
-  "bidAmount": 10000
+  "bidAmount": 10002
 }

@@ -1,4 +1,4 @@
-import handleProtectedRoute from "./checkIfTokenValid.js";
+import handleProtectedRoute from "./handleProtectedRoute.js";
 import logoutUser from "./logoutUser.js";
 
 const routes =
@@ -7,7 +7,7 @@ const routes =
             path: `/listings/(?<listingId>.*)`,
             component: async () => import("../pages/ListingPage.svelte"),
             post: async () => {
-                return handleProtectedRoute("listings/(?<listingId>.*)", async () => import("../pages/ListingPage.svelte"));
+                return handleProtectedRoute();
             }
         },
         {
@@ -16,8 +16,14 @@ const routes =
         },
         {
             path: `/listings`,
-            pre: async () => {
-                return handleProtectedRoute("listings", async () => import("../pages/ListingsPage.svelte"));
+            component: async () => import("../pages/ListingsPage.svelte"),
+            props: {
+                myProps: {
+                    expired: false
+                }
+            },
+            post: async () => {
+                return handleProtectedRoute();
             }
         },
         {
@@ -29,6 +35,25 @@ const routes =
         {
             path: '/register',
             component: async () => import("../pages/RegisterPage.svelte")
+        },
+        {
+            path: "/archive",
+            component: async () => import("../pages/ListingsPage.svelte"),
+            props: {
+                myProps: {
+                    expired: true
+                }
+            },
+            post: async () => {
+                return handleProtectedRoute();
+            }
+        },
+        {
+            path: "/bids",
+            component: async () => import("../pages/BidsPage.svelte"),
+            post: async () => {
+                return handleProtectedRoute();
+            }
         }
     ]
 

@@ -3,6 +3,7 @@
     import NumberFlow from '@number-flow/svelte'
     import Bid from "../components/Bid.svelte";
     import {fly} from 'svelte/transition';
+    import Category from "../components/Category.svelte";
 
     const {params} = $props();
     const listingId = params.listingId;
@@ -17,6 +18,8 @@
     let image = $state();
     let bids = $state([]);
     let category = $state();
+
+    let errorMessage = $state();
 
     let timeLeft = $state({
         days: 0,
@@ -81,11 +84,15 @@
 
             await fetchListing();
 
+            if(!response.ok) {
+                errorMessage = await response.json();
+            }
+
             if (response.ok) {
                 isBidding = false;
             }
         } catch (e) {
-            console.error(e);
+            console.error(e.message);
         }
     };
 
@@ -115,14 +122,14 @@
         <h2 class="font-bold text-4xl mb-2">{listingData.name}</h2>
         <NumberFlow class="text-[--color-text] font-bold text-3xl mb-2 block" value={currentPrice}
                     format={{style: "currency", currency: "EUR"}}/>
-        <span class="font-medium text-l bg-gradient-to-t from-purple-100 to-purple-300 rounded-full py-1 px-3 text-purple-700">{category}</span>
+        <Category text={category}/>
         <p class="mt-4 opacity-50 text-pretty">{listingData.description}</p>
     </div>
     <div class="w-full h-[50rem] p-3">
         {#each bids as bid, index}
             <div transition:fly={{ x: -20, duration: 200, delay: index * 50 }}>
                 {#if index === 0}
-                    <h2 class="font-bold text-2xl my-5">Hoogste bod</h2>
+                    <h2 class="font-bold text-2xl my-5">Top tien</h2>
                     <Bid bidder={bid.bidder} amount={bid.amount} highest={true}/>
                     <hr class="mb-5">
                 {:else if index < 10}
@@ -156,6 +163,7 @@
                            class="p-1 outline outline-1 rounded-xl"
                            bind:value={bid}>
                 </form>
+                <h1 class="text-red-700">{errorMessage}</h1>
             {/if}
         {:else}
             <h2 class="font-bold text-4xl text-red-400 mb-5">Veiling is voorbij</h2>

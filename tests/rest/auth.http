@@ -1,0 +1,97 @@
+### POST Create user with invalid password (too short)
+POST {{protocol}}{{host}}:{{port}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "user",
+  "password": "pass"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 400, "Response status is not 400");
+        }
+    );
+%}
+
+### POST Login with invalid password and username
+POST {{protocol}}{{host}}:{{port}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "invalid  username",
+  "password": "pass"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 404, "Response status is not 404");
+        }
+    );
+%}
+
+### POST Login with invalid password and username
+POST {{protocol}}{{host}}:{{port}}/auth
+Authorization: Bearer inVaLiDToKen1232131
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 403, "Response status is not 403");
+        }
+    );
+%}
+
+### POST Login with valid username and password
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}
+
+### POST request to example server
+POST http://localhost:3000/bids
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MjA0MTEzfQ.RaxSwfz__XZ5fASpZ5Y4gAFH51SE3gIlT8jUPk3pChU
+Content-Type: application/json
+
+{
+  "listingId": 2,
+  "bidAmount": 10002
+}
+
+### POST With already existing user
+POST {{protocol}}{{host}}:{{port}}/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 400, "Response status is not 400");
+        }
+    );
+%}

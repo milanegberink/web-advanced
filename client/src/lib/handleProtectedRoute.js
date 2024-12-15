@@ -1,15 +1,12 @@
 import { goto } from '@mateothegreat/svelte5-router';
 
-const handleProtectedRoute = async (path, component) => {
+const handleProtectedRoute = async () => {
     if (!localStorage.getItem("token")) {
-        return goto("login")
-    } else if (!(await checkIfTokenValid())) {
         return goto("login")
     }
 
-    return {
-        path,
-        component
+    if (!(await checkIfTokenValid())) {
+        return goto("login")
     }
 }
 

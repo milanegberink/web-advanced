@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "New listing 3",
+    "name": "RTX 4090",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.",
     "category": "Electronics",
     "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
@@ -11,92 +11,12 @@
       "endDate": "2024-12-25T00:00:00.000Z",
       "bids": [
         {
-          "bidder": "Milan Egberink",
-          "amount": 1004,
-          "userId": "userId"
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1005,
+          "bidder": "admin",
+          "amount": 6,
           "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1006,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1007,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1008,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1009,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1010,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1011,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1012,
-          "userId": 6
-        },
-        {
-          "bidder": "lebronjames",
-          "amount": 1013,
-          "userId": 6
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1014,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1015,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1017,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1018,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1019,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1020,
-          "userId": 1
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 1021,
-          "userId": 1
         }
       ],
-      "currentPrice": 1021
+      "currentPrice": 6
     }
   },
   {

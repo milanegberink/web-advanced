@@ -5,7 +5,7 @@ const navLinks = [
         icon: "gavel"
     },
     {
-        text: "Biedingen",
+        text: "Uw Biedingen",
         href: "/bids",
         icon: "event_upcoming"
     },
@@ -20,5 +20,6 @@ const navLinks = [
         icon: "logout"
     }
 ];
+
 
 export default navLinks;
