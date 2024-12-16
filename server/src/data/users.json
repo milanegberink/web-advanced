@@ -6,8 +6,7 @@
     "roles": [
       "user",
       "admin"
-    ],
-    "secret": "70f0a47e-2b82-4e55-b86e-179dba9331e3"
+    ]
   },
   {
     "id": 2,
@@ -15,8 +14,7 @@
     "password": "$2b$10$k0jOEjxg4LnyTHx6Z1MtSOKOU0IuEQvjgSlWUOK9zYZKvLKghmVBm",
     "roles": [
       "user"
-    ],
-    "secret": "b5ddf88b-74fe-4782-9cca-7a27823597a2"
+    ]
   },
   {
     "id": 3,
@@ -25,5 +23,14 @@
     "roles": [
       "user"
     ]
+  },
+  {
+    "id": 4,
+    "username": "nieuweuser",
+    "password": "$2b$10$1eXnxI2uEQnEohi2Z7wfo.dvy3Noi8jgyq/1MDvFzxgoTGZExPKKC",
+    "roles": [
+      "user"
+    ],
+    "secret": "7867db6c-e80c-4226-ae37-93ebeac64e60"
   }
 ]

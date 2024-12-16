@@ -28,9 +28,19 @@
           "bidder": "milanegberink",
           "amount": 4000,
           "userId": 2
+        },
+        {
+          "bidder": "admin",
+          "amount": 5000,
+          "userId": 1
+        },
+        {
+          "bidder": "milanegberink",
+          "amount": 7000,
+          "userId": 2
         }
       ],
-      "currentPrice": 4000
+      "currentPrice": 7000
     }
   },
   {
