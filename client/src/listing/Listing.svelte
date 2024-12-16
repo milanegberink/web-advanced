@@ -11,7 +11,7 @@
 </script>
 
 <a use:route href="/listings/{id}"
-   class="group flex justify-between items-center h-[100px] py-2 px-4 rounded-2xl outline outline-2 outline-[var(--color-bg-2)] transition-shadow duration-200 hover:bg-gray-50">
+   class="group flex justify-between items-center h-[100px] py-2 px-4 rounded-2xl outline outline-2 outline-[var(--color-bg-2)] transition-shadow duration-200 hover:bg-[var(--color-bg-0)]">
     <div class="rounded-xl aspect-square h-full overflow-hidden">
         <img src={image} alt="L image" class="object-cover rounded-xl aspect-square group-hover:scale-105 transition-all">
     </div>

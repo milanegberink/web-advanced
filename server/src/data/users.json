@@ -6,7 +6,8 @@
     "roles": [
       "user",
       "admin"
-    ]
+    ],
+    "secret": "e844261d-312c-4d72-8917-5184003c9de5"
   },
   {
     "id": 2,
@@ -30,7 +31,6 @@
     "password": "$2b$10$1eXnxI2uEQnEohi2Z7wfo.dvy3Noi8jgyq/1MDvFzxgoTGZExPKKC",
     "roles": [
       "user"
-    ],
-    "secret": "7867db6c-e80c-4226-ae37-93ebeac64e60"
+    ]
   }
 ]
