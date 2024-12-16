@@ -61,7 +61,11 @@ const routes =
             post: async () => {
                 return handleProtectedRoute('admin');
             }
-        }
+        },
+        {
+            path: "/",
+            component: async () => import("../pages/LoginPage.svelte"),
+        },
     ]
 
 export default routes;
