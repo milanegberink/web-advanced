@@ -32,7 +32,6 @@ const newBid = async (listingId, bidderName, bidAmount, userId) => {
 
     listing.auction.currentPrice = bidAmount;
 
-
     await writeToFile(listings, './src/data/listings.json');
 };
 

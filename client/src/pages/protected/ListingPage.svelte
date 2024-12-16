@@ -1,9 +1,9 @@
 <script>
     import {onMount} from "svelte";
     import NumberFlow from '@number-flow/svelte'
-    import Bid from "../components/Bid.svelte";
+    import Bid from "../../components/misc/Bid.svelte";
     import {fly} from 'svelte/transition';
-    import Category from "../components/Category.svelte";
+    import Category from "../../components/misc/Category.svelte";
 
     const {params} = $props();
     const listingId = params.listingId;
@@ -70,7 +70,7 @@
         event.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:3000/bids', {
+            const response = await fetch(`http://localhost:3000/bids/${listingId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -78,7 +78,6 @@
                 },
                 body: JSON.stringify({
                     bidAmount: bid,
-                    listingId: listingId
                 })
             });
 
@@ -117,7 +116,7 @@
 <div class="w-full h-full flex flex-col justify-center items-center md:flex-col lg:flex-row" >
     <div class="w-full h-[50rem] p-3">
         <div class="container bg-white mb-3 w-full aspect-square outline outline-1 outline-[--color-bg-2] rounded-xl">
-            <img src={image} alt="" class="object-cover">
+            <img src={image} alt="" class="object-contain aspect-square rounded-xl">
         </div>
         <h2 class="font-bold text-4xl mb-2">{listingData.name}</h2>
         <NumberFlow class="text-[--color-text] font-bold text-3xl mb-2 block" value={currentPrice}
@@ -129,7 +128,7 @@
         {#each bids as bid, index}
             <div transition:fly={{ x: -20, duration: 200, delay: index * 50 }}>
                 {#if index === 0}
-                    <h2 class="font-bold text-2xl my-5">Top tien</h2>
+                    <h2 class="font-bold text-2xl">Top tien</h2>
                     <Bid bidder={bid.bidder} amount={bid.amount} highest={true}/>
                     <hr class="mb-5">
                 {:else if index < 10}
@@ -163,7 +162,7 @@
                            class="p-1 outline outline-1 rounded-xl"
                            bind:value={bid}>
                 </form>
-                <h1 class="text-red-700">{errorMessage}</h1>
+                <p class="text-red-700">{errorMessage}</p>
             {/if}
         {:else}
             <h2 class="font-bold text-4xl text-red-400 mb-5">Veiling is voorbij</h2>

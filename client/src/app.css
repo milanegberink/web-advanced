@@ -12,6 +12,15 @@
   -moz-osx-font-smoothing: grayscale;
 
   --color-primary: #4aa134;
+
+  --clr-primary: lightblue;
+  --clr-success: lightgreen;
+  --clr-error: lightcoral;
+  --clr-warning: orange;
+  --color-bg-0: #EFEFEF;
+  --color-bg-1: white;
+  --color-bg-2: rgba(0, 0, 0, 0.05);
+  --color-text: #0B1215;
 }
 
 [data-theme="light"] {
@@ -51,8 +60,23 @@ a {
   text-decoration: none;
 }
 
-a, h1, h2, h3, p, span, .material-symbols-outlined {
+a, h1, h2, h3, p, span, .material-symbols-outlined, label {
   color: var(--color-text);
   transition: color 300ms;
 }
+
+input:not(:placeholder-shown):invalid {
+  outline: 1px solid var(--clr-error);
+  outline-offset: 3px;
+}
+
+input:not(:placeholder-shown):valid {
+  outline: 1px solid var(--clr-success);
+  outline-offset: 3px;
+}
+
+input:focus:invalid {
+  outline: 1px solid var(--clr-warning);
+}
+
 

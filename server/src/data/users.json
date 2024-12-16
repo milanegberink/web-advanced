@@ -1,39 +1,29 @@
 [
   {
     "id": 1,
-    "username": "michaeljackson",
-    "password": "$2b$10$pteCJlsZNt2UwXBr9PYg5uI82px2vauP38.8XoIxtXWM6ruecw9PG",
-    "role": "user"
+    "username": "admin",
+    "password": "$2b$10$WQNtknh2MqrJQTPPiOjTFeIh17Hitc5f9Pfwxs9k4q6ElqjRr6iV6",
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "secret": "70f0a47e-2b82-4e55-b86e-179dba9331e3"
   },
   {
     "id": 2,
-    "username": "milan",
-    "password": "$2b$10$AOocnvKVosc3cuyHhSxSTOvKwskO0RjouX7PpKN1QDg7lfCjrmdrC",
-    "role": "user"
+    "username": "milanegberink",
+    "password": "$2b$10$k0jOEjxg4LnyTHx6Z1MtSOKOU0IuEQvjgSlWUOK9zYZKvLKghmVBm",
+    "roles": [
+      "user"
+    ],
+    "secret": "b5ddf88b-74fe-4782-9cca-7a27823597a2"
   },
   {
     "id": 3,
-    "username": "milanegberink",
-    "password": "$2b$10$R33NDqPk..WyN8FKh.a2/u133xfSraZcyg2mav6h8V5RYu2N/1rju",
-    "role": "user"
-  },
-  {
-    "id": 4,
-    "username": "milanovic",
-    "password": "$2b$10$fItb93C12UC2mYukvFibruKz57A2nYZrJgAsqZA8nfopKdCyiZPU.",
-    "role": "user"
-  },
-  {
-    "id": 5,
-    "username": "ditiseentest",
-    "password": "$2b$10$n.lTGUZG956azHVckkaLn.n0aLTozbIkt6aRLOg/EwiGOEC1cWc0W",
-    "role": "user"
-  },
-  {
-    "id": 6,
-    "username": "admin",
-    "password": "$2b$10$WQNtknh2MqrJQTPPiOjTFeIh17Hitc5f9Pfwxs9k4q6ElqjRr6iV6",
-    "role": "user",
-    "secret": "8a00a11d-872a-450a-8701-11a6c9240408"
+    "username": "michaeljackson",
+    "password": "$2b$10$mh5AlzmZB0pwkqyCfCCSUuffSBGp3nJJwJOSA08fXizDmSsy89goG",
+    "roles": [
+      "user"
+    ]
   }
 ]

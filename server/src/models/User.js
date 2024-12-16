@@ -3,11 +3,11 @@ import writeToFile from "../modules/writeToFile.js";
 import {validatePassword, hashPassword} from "../modules/passwordUtils.js";
 
 class User {
-    constructor(id, username, password, role) {
+    constructor(id, username, password) {
         this.id = id;
         this.setUsername(username);
         this.password = password;
-        this.setRole(role);
+        this.roles = ['user'];
     }
 
     static create = async (username, password, role) => {
@@ -20,6 +20,10 @@ class User {
     }
 
     setUsername(username) {
+
+        if(!username) {
+            throw new Error('Username is required');
+        }
 
         username = username.toLowerCase();
 
@@ -36,15 +40,6 @@ class User {
         }
 
         this.username = username;
-    }
-
-    setRole(role) {
-
-        if (role !== 'admin' && role !== 'user') {
-            throw new Error('Role must be either admin or user');
-        }
-
-        this.role = role;
     }
 
     async save() {

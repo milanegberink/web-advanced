@@ -1,0 +1,88 @@
+### POST Get token with valid credentials
+POST {{protocol}}{{host}}:{{port}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+    let responseBody = JSON.parse(response.body);
+    client.log(responseBody.token);
+    client.global.set("token", responseBody.token);
+%}
+
+
+### Get All Listings
+GET {{protocol}}{{host}}:{{port}}/listings
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}
+
+### Get Active Listings
+GET {{protocol}}{{host}}:{{port}}/listings?expired=false
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}
+
+### Get Expired Listings
+GET {{protocol}}{{host}}:{{port}}/listings?expired=true
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}
+
+### Get Listing by ID (replace 1 with an actual ID)
+GET {{protocol}}{{host}}:{{port}}/listings/1
+
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}
+
+### Create a New Listing
+POST {{protocol}}{{host}}:{{port}}/listings
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Listing From REST Test",
+  "description": "Listing From REST Test, delete this listing from the admin panel",
+  "startingPrice": 999,
+  "category": "TEST",
+  "image": "camera.jpg",
+  "endingDate": "2025-02-15T20:00:00Z"
+}
+
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 201, "Response status is not 201");
+        }
+    );
+%}

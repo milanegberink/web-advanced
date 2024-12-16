@@ -1,5 +1,5 @@
 ### POST Create user with invalid password (too short)
-POST {{protocol}}{{host}}:{{port}}/register
+POST {{protocol}}{{host}}:{{port}}/auth/register
 Content-Type: application/json
 Accept: application/json
 
@@ -17,8 +17,46 @@ Accept: application/json
     );
 %}
 
+### POST Create user with an empty username
+POST {{protocol}}{{host}}:{{port}}/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "password": "password"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 400, "Response status is not 400");
+        }
+    );
+%}
+
+### POST Create user with spaces in username
+POST {{protocol}}{{host}}:{{port}}/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "mijn koele username",
+  "password": "pass"
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 400, "Response status is not 400");
+        }
+    );
+%}
+
+
 ### POST Login with invalid password and username
-POST {{protocol}}{{host}}:{{port}}/login
+POST {{protocol}}{{host}}:{{port}}/auth/login
 Content-Type: application/json
 Accept: application/json
 
@@ -36,21 +74,8 @@ Accept: application/json
     );
 %}
 
-### POST Login with invalid password and username
-POST {{protocol}}{{host}}:{{port}}/auth
-Authorization: Bearer inVaLiDToKen1232131
-
-> {%
-    client.test(
-        "Request executed successfully",
-        function() {
-            client.assert(response.status === 403, "Response status is not 403");
-        }
-    );
-%}
-
 ### POST Login with valid username and password
-POST http://localhost:3000/login
+POST {{protocol}}{{host}}:{{port}}/auth/login
 Content-Type: application/json
 
 {
@@ -67,18 +92,9 @@ Content-Type: application/json
     );
 %}
 
-### POST request to example server
-POST http://localhost:3000/bids
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pY2hhZWxqYWNrc29uIiwicm9sZSI6InVzZXIiLCJpZCI6MSwiaWF0IjoxNzM0MjA0MTEzfQ.RaxSwfz__XZ5fASpZ5Y4gAFH51SE3gIlT8jUPk3pChU
-Content-Type: application/json
-
-{
-  "listingId": 2,
-  "bidAmount": 10002
-}
 
 ### POST With already existing user
-POST {{protocol}}{{host}}:{{port}}/register
+POST {{protocol}}{{host}}:{{port}}/auth/register
 Content-Type: application/json
 Accept: application/json
 

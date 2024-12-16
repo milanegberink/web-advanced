@@ -1,6 +1,6 @@
 <script>
     import Sidebar from "./Sidebar.svelte";
-    import Profile from "../Profile.svelte";
+    import Profile from "./Profile.svelte";
     import SidebarToggle from "../buttons/SidebarToggle.svelte";
     import {isSidebarOpen} from '../../stores/uiStore.svelte.js';
     import ThemeSwitcher from "../buttons/ThemeSwitcher.svelte";

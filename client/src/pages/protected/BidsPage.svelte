@@ -2,7 +2,7 @@
     import {onMount} from "svelte";
     import NumberFlow from "@number-flow/svelte";
     import {route} from '@mateothegreat/svelte5-router'
-    import Icon from "../components/Icon.svelte";
+    import Icon from "../../components/UI/Icon.svelte";
 
     let bids = $state();
 

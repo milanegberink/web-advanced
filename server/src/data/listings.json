@@ -1,92 +1,137 @@
 [
   {
     "id": 1,
-    "name": "RTX 4090",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.",
-    "category": "Electronics",
-    "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
-    "manufacturer": "",
+    "name": "Winnend Oudejaarslot",
+    "description": "Winnende Lot voor ouderjaarstrekking 2024",
+    "category": "Gokken",
+    "image": "https://cigospithoff.nl/wp-content/uploads/2021/12/HEEL-OUDEJAARSLOT.png",
     "auction": {
-      "startingPrice": 1,
-      "endDate": "2024-12-25T00:00:00.000Z",
+      "startingPrice": 1000,
+      "endDate": "2024-12-31T23:00:00.000Z",
       "bids": [
         {
           "bidder": "admin",
-          "amount": 6,
-          "userId": 6
-        },
-        {
-          "bidder": "michaeljackson",
-          "amount": 7,
+          "amount": 2000,
           "userId": 1
         },
         {
+          "bidder": "milanegberink",
+          "amount": 3000,
+          "userId": 2
+        },
+        {
           "bidder": "admin",
-          "amount": 8,
-          "userId": 6
+          "amount": 3002,
+          "userId": 1
+        },
+        {
+          "bidder": "milanegberink",
+          "amount": 4000,
+          "userId": 2
         }
       ],
-      "currentPrice": 8
+      "currentPrice": 4000
     }
   },
   {
     "id": 2,
-    "name": "New listing",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan erat libero, sed placerat tellus pharetra sed. Mauris dignissim placerat ante, sed congue lectus efficitur quis. Duis ut arcu sit amet lectus ultricies tincidunt vitae nec nisi. Nam nisi diam, finibus quis mauris ullamcorper, imperdiet gravida sem.",
+    "name": "iPhone 13 Pro Max",
+    "description": "Zeer goed onderhouden iPhone 13 Pro Max met 256GB opslag in de kleur grafiet. Geen krassen of beschadigingen, altijd gebruikt met hoesje en screenprotector. Batterijcapaciteit nog in topconditie. Wordt geleverd met originele doos en oplader. Perfect voor wie op zoek is naar een krachtige en stijlvolle smartphone!  \n\n",
     "category": "Electronics",
-    "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
-    "manufacturer": "z",
+    "image": "https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-13-pro-graphite-back.png?v=63198538",
     "auction": {
-      "startingPrice": 1,
-      "endDate": "2023-12-07T21:30:00.000Z",
+      "startingPrice": 500,
+      "endDate": "2025-01-14T23:00:00.000Z",
       "bids": [
         {
-          "bidder": "Milan Egberink",
-          "amount": 1004,
-          "userId": "userId"
+          "bidder": "admin",
+          "amount": 600,
+          "userId": 1
         },
         {
-          "bidder": "Test1330",
-          "amount": 2000,
-          "userId": "userId"
-        },
-        {
-          "bidder": "Test1330",
-          "amount": 5000,
-          "userId": "userId"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "6000",
-          "userId": "1"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "8000",
-          "userId": "1"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "21000",
-          "userId": "1"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "22000",
-          "userId": "1"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "23000",
-          "userId": "1"
-        },
-        {
-          "bidder": "Youssef",
-          "amount": "25000",
-          "userId": "1"
+          "bidder": "milanegberink",
+          "amount": 650,
+          "userId": 2
         }
       ],
-      "currentPrice": "25000"
+      "currentPrice": 650
+    }
+  },
+  {
+    "id": 3,
+    "name": "Rolls Royce Phantom",
+    "description": "Exclusieve Rolls-Royce Phantom in uitstekende staat. Deze tijdloze schoonheid combineert ongeëvenaard comfort met een krachtige V12-motor. Luxe interieur met handgemaakt leder, hoogwaardig houtafwerking en een sterrenhemelplafond. Altijd dealer onderhouden, volledig schadevrij en voorzien van een recente servicebeurt.",
+    "category": "Cars",
+    "image": "https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/news/43000/400/40/2024-rolls_royce-phantom_scintilla-2.jpg",
+    "auction": {
+      "startingPrice": 200000,
+      "endDate": "2025-02-02T23:00:00.000Z",
+      "bids": [
+        {
+          "bidder": "milanegberink",
+          "amount": 201000,
+          "userId": 2
+        }
+      ],
+      "currentPrice": 201000
+    }
+  },
+  {
+    "id": 4,
+    "name": "Mooie Woning",
+    "description": "Prachtige instapklare woning in een rustige en kindvriendelijke buurt. Deze goed onderhouden woning biedt alle comfort en ruimte die je zoekt! Met een lichte woonkamer, moderne keuken, royale slaapkamers en een ruime tuin is dit de ideale plek om je thuis te voelen.",
+    "category": "Houses",
+    "image": "https://www.villasud.nl/imagecache/fit/900x600/uploads/images/accommodaties/59baed20-f944-4ef4-71b8-5caf93f811ff/Villa_Cavalaire_Sainte_Maxime_luxus_villa.jpg",
+    "auction": {
+      "startingPrice": 600000,
+      "endDate": "2023-12-19T00:21:00.000Z",
+      "bids": [
+        {
+          "bidder": "admin",
+          "amount": 610000,
+          "userId": 1
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 620000,
+          "userId": 3
+        },
+        {
+          "bidder": "milanegberink",
+          "amount": 630000,
+          "userId": 2
+        },
+        {
+          "bidder": "michaeljackson",
+          "amount": 700000,
+          "userId": 3
+        }
+      ],
+      "currentPrice": 700000
+    }
+  },
+  {
+    "id": 5,
+    "name": "RTX 4090",
+    "description": "Nvidia RTX 4090 in erg goede staat,",
+    "category": "Electronics",
+    "image": "https://cf-images.dustin.eu/cdn-cgi/image/fit=contain,format=auto,quality=75,width=828,fit=contain/image/d2000010011181779/asus-geforce-rtx-4090-rog-strix-gaming-24gb.png",
+    "auction": {
+      "startingPrice": 900,
+      "endDate": "2025-02-14T10:00:00.000Z",
+      "bids": [
+        {
+          "bidder": "admin",
+          "amount": 1200,
+          "userId": 1
+        },
+        {
+          "bidder": "milanegberink",
+          "amount": 1205,
+          "userId": 2
+        }
+      ],
+      "currentPrice": 1205
     }
   }
 ]

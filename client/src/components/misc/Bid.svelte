@@ -1,5 +1,5 @@
 <script>
-    import Icon from "./Icon.svelte";
+    import Icon from "../UI/Icon.svelte";
 
     export let bidder;
     export let amount;

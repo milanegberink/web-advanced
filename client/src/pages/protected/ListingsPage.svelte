@@ -1,6 +1,6 @@
 <script>
     import {onMount} from "svelte";
-    import Listing from "../components/Listing.svelte";
+    import Listing from "../../listing/Listing.svelte";
 
     let listings = $state();
 

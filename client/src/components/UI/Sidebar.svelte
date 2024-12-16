@@ -2,18 +2,19 @@
     import {isSidebarOpen} from '../../stores/uiStore.svelte.js';
     import NavLink from "./NavLink.svelte";
     import navLinks from "../../lib/navLinks.svelte.js";
+    import {isAdmin} from "../../stores/userStore.svelte.js";
 </script>
 
 <nav id="sidebar" class={$isSidebarOpen ? 'open' : ''}>
     <div class="sidebar-content">
         <img class="aspect-square w-[100px]" src="../src/assets/logo.svg">
         <ul>
-            {#each navLinks as link, index}
+            {#each navLinks as link}
                 <NavLink href={link.href} text={link.text} icon={link.icon}/>
-                {#if index === navLinks.length-2}
-                    <hr>
-                {/if}
             {/each}
+            {#if $isAdmin}
+                <NavLink href={'/admin'} text={"Admin"} icon={"admin_panel_settings"}/>
+            {/if}
         </ul>
     </div>
 </nav>

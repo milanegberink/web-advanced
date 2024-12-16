@@ -1,10 +1,8 @@
-import Bid from "./Bid.js";
-
 class Auction {
-    constructor(startingPrice, bids, endDate) {
+    constructor(startingPrice, endDate) {
         this.setStartingPrice(startingPrice);
         this.setEndDate(endDate);
-        this.setBids(bids);
+        this.bids = [];
         this.currentPrice = startingPrice;
     }
     setStartingPrice(startingPrice) {
@@ -12,13 +10,6 @@ class Auction {
             throw new Error('Starting price must be a number greater than or equal to 0');
         }
         this.startingPrice = startingPrice;
-    }
-    setBids(bids) {
-        if (!bids.every(bid => bid instanceof Bid)) {
-            throw new Error('Bids must be an array of Bid instances');
-        }
-
-        this.bids = bids;
     }
 
     setEndDate(endDate) {

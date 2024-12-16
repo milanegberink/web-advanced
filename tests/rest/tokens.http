@@ -1,0 +1,41 @@
+### POST Get token with valid credentials
+POST {{protocol}}{{host}}:{{port}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+    let responseBody = JSON.parse(response.body);
+    client.log(responseBody.token);
+    client.global.set("token", responseBody.token);
+%}
+
+
+### POST Auth with invalid token
+POST {{protocol}}{{host}}:{{port}}/auth/user
+Authorization: Bearer inVaLiDToKen1232131
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 403, "Response status is not 403");
+        }
+    );
+%}
+
+### POST Auth with valid token
+POST {{protocol}}{{host}}:{{port}}/auth/user
+Authorization: Bearer {{token}}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 200, "Response status is not 200");
+        }
+    );
+%}

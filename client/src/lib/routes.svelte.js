@@ -5,9 +5,9 @@ const routes =
     [
         {
             path: `/listings/(?<listingId>.*)`,
-            component: async () => import("../pages/ListingPage.svelte"),
+            component: async () => import("../pages/protected/ListingPage.svelte"),
             post: async () => {
-                return handleProtectedRoute();
+                return handleProtectedRoute('user');
             }
         },
         {
@@ -16,14 +16,14 @@ const routes =
         },
         {
             path: `/listings`,
-            component: async () => import("../pages/ListingsPage.svelte"),
+            component: async () => import("../pages/protected/ListingsPage.svelte"),
             props: {
                 myProps: {
                     expired: false
                 }
             },
             post: async () => {
-                return handleProtectedRoute();
+                return handleProtectedRoute('user');
             }
         },
         {
@@ -38,21 +38,28 @@ const routes =
         },
         {
             path: "/archive",
-            component: async () => import("../pages/ListingsPage.svelte"),
+            component: async () => import("../pages/protected/ListingsPage.svelte"),
             props: {
                 myProps: {
                     expired: true
                 }
             },
             post: async () => {
-                return handleProtectedRoute();
+                return handleProtectedRoute('user');
             }
         },
         {
             path: "/bids",
-            component: async () => import("../pages/BidsPage.svelte"),
+            component: async () => import("../pages/protected/BidsPage.svelte"),
             post: async () => {
-                return handleProtectedRoute();
+                return handleProtectedRoute('user');
+            }
+        },
+        {
+            path: "/admin",
+            component: async () => import("../pages/protected/+admin/AdminPage.svelte"),
+            post: async () => {
+                return handleProtectedRoute('admin');
             }
         }
     ]

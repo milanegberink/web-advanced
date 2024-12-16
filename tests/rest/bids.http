@@ -1,0 +1,32 @@
+### POST Get token with valid credentials
+POST {{protocol}}{{host}}:{{port}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+    let responseBody = JSON.parse(response.body);
+    client.log(responseBody.token);
+    client.global.set("token", responseBody.token);
+%}
+
+### POST request to submit a bid to an already expired auction
+POST {{protocol}}{{host}}:{{port}}/bids/4
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bidAmount": 9999999
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function() {
+            client.assert(response.status === 400, "Response status is not 400");
+        }
+    );
+%}

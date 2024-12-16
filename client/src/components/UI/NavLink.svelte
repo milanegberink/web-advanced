@@ -1,5 +1,5 @@
 <script>
-    import Icon from "../Icon.svelte";
+    import Icon from "./Icon.svelte";
     import {route} from "@mateothegreat/svelte5-router";
     import {currentRoute} from "../../stores/uiStore.svelte.js";
 
