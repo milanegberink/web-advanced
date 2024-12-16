@@ -49,9 +49,4 @@
         padding: 0;
         margin-top: 10px;
     }
-
-    hr {
-        border: 1px dashed var(--color-bg-2);
-        margin: 30px 0;
-    }
 </style>
